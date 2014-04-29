@@ -1,10 +1,5 @@
 # Bzr for Emacs cedet plugin
 dev-vcs/bzr curl
-# Chromium
-www-client/chromium custom-cflags
->=sys-libs/zlib-1.2.8-r1 minizip
-=dev-libs/libxml2-2.9.1-r1 icu
-=media-libs/harfbuzz-0.9.23 icu
 # Mozilla
 =dev-lang/python-2.7.5-r3 sqlite
 >=www-client/firefox-28.0 custom-cflags gstreamer
@@ -24,10 +19,6 @@ dev-libs/nss utils
 net-dialup/ppp dhcp
 # QEMU & KVM
 app-emulation/qemu opengl virtfs xattr
-# Tex
-dev-perl/Spreadsheet-ParseExcel cjk
-app-text/texlive-core cjk xetex
-app-text/texlive cjk xetex
 # Video Card
 x11-drivers/xf86-video-intel uxa
 # Virtual Box

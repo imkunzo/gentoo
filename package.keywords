@@ -1,18 +1,12 @@
-# Awesome WM
-=x11-wm/awesome-3.5.5 ~amd64
 # Conkeror
 >=www-client/conkeror-1.0_pre20140212 ~amd64
 >=www-client/firefox-28.0 ~amd64
 # Fcitx Sougou Pinyin
 >=app-i18n/fcitx-sogoupinyin-0.0.4 ~amd64
-# Google Chrome
-=www-client/google-chrome-33.0.1750.152_p1 ~amd64
 # JRE
 >=dev-java/icedtea-bin-7.2.4.3 ~amd64
 >=virtual/jdk-1.7.0 ~amd64
 >=virtual/jre-1.7.0 ~amd64
-# Oracle Sqldeveloper
->=dev-db/sqldeveloper-4.0.1.14.48 ~amd64
 # QEMU & KVM
 =app-emulation/qemu-1.6.1 ~amd64
 =sys-apps/dtc-1.4.0 ~amd64
