@@ -1,0 +1,34 @@
+# Bzr for Emacs cedet plugin
+dev-vcs/bzr curl
+# Chromium
+www-client/chromium custom-cflags
+>=sys-libs/zlib-1.2.8-r1 minizip
+=dev-libs/libxml2-2.9.1-r1 icu
+=media-libs/harfbuzz-0.9.23 icu
+# Mozilla
+=dev-lang/python-2.7.5-r3 sqlite
+>=www-client/firefox-28.0 custom-cflags gstreamer
+>=media-plugins/gst-plugins-meta-0.10-r8:0.10 ffmpeg
+>=mail-client/thunderbird-24.4.0 custom-cflags gstreamer
+# Emacs
+app-editors/emacs imagemagick xft
+# Graphviz
+>=media-libs/gd-2.0.35-r3 fontconfig
+# Layman
+app-portage/layman cvs subversion
+# Midnight Commander
+app-misc/mc sftp
+# NSS
+dev-libs/nss utils
+# PPP
+net-dialup/ppp dhcp
+# QEMU & KVM
+app-emulation/qemu opengl virtfs xattr
+# Tex
+dev-perl/Spreadsheet-ParseExcel cjk
+app-text/texlive-core cjk xetex
+app-text/texlive cjk xetex
+# Video Card
+x11-drivers/xf86-video-intel uxa
+# Virtual Box
+app-emulation/virtualbox qt4
