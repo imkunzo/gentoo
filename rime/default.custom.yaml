@@ -1,2 +1,4 @@
 patch:
-  "menu/page_size": 6
+  menu/page_size: 6
+  style/horizontal: true
+  style/display_tray_icon: true
