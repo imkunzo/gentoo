@@ -1,0 +1,14 @@
+<sys-devel/libtool-2.4.3-r2
+<sys-apps/openrc-0.13.0
+<sys-process/procps-3.3.9-r2
+<dev-lang/perl-5.18.0
+# rime im
+=app-i18n/librime-9999
+<app-i18n/librime-1.2.9
+<app-i18n/opencc-1.0.4
+# virtualbox
+<app-emulation/virtualbox-5.1.6
+# xmind
+<app-misc/xmind-3.6.1-r1
+# intellij idea
+<dev-util/idea-ultimate-2016.1.2.145.972.3

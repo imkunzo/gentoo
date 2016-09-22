@@ -1,0 +1,25 @@
+x11-misc/rofi ~amd64
+x11-libs/xcb-util-xrm ~amd64
+# Allow root password logins in the live-cds
+=net-misc/openssh-7.2_p2-r1
+# google chrome
+=www-client/google-chrome-53.0.2785.116 ~amd64
+# shadowsocks-libev
+=net-proxy/shadowsocks-libev-2.5.0-r1 ~amd64
+# alsamixer-app
+=media-sound/alsamixer-app-0.1 ~amd64
+# arc-theme
+=x11-themes/arc-theme-20160605 ~amd64
+# emacs
+=app-editors/emacs-25.1 ~amd64
+=virtual/emacs-25 ~amd64
+# Nvidia
+=app-i18n/opencc-1.0.4 ~amd64
+# virtualbox
+=dev-util/kbuild-0.1.9998_pre20131130-r1 ~amd64
+=app-emulation/virtualbox-modules-5.1.6 ~amd64
+=app-emulation/virtualbox-5.1.6 ~amd64
+# xmind
+=app-misc/xmind-3.6.1-r1 ~amd64
+# intellij idea
+=dev-util/idea-ultimate-2016.1.2.145.972.3 ~amd64
