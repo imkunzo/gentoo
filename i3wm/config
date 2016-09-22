@@ -212,3 +212,5 @@ bar {
         urgent_workspace   #333333 #900000 #ffffff
     }
 }
+
+# Startup
