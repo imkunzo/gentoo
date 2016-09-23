@@ -17,9 +17,18 @@ x11-libs/xcb-util-xrm ~amd64
 =app-i18n/opencc-1.0.4 ~amd64
 # virtualbox
 =dev-util/kbuild-0.1.9998_pre20131130-r1 ~amd64
-=app-emulation/virtualbox-modules-5.1.6 ~amd64
 =app-emulation/virtualbox-5.1.6 ~amd64
+=app-emulation/virtualbox-additions-5.1.6 ~amd64
+=app-emulation/virtualbox-modules-5.1.6 ~amd64
 # xmind
 =app-misc/xmind-3.6.1-r1 ~amd64
 # intellij idea
 =dev-util/idea-ultimate-2016.1.2.145.972.3 ~amd64
+# wps office
+=app-office/wps-office-10.1.0.5672_alpha21 ~amd64
+# lightdm
+=x11-misc/lightdm-1.19.4 ~amd64
+# cups
+=net-print/cups-filters-1.11.4 ~amd64
+# i3wm
+=x11-wm/i3-4.12 ~amd64

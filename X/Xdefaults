@@ -55,7 +55,7 @@ URxvt.borderLess: False
 Xft.dpi:96
 Xft.antialias:true
 Xft.hinting: full
-URxvt.font:xft:Ubuntu Mono:size=12:style=Regular:antialias=true,xft:WenQuanYi Micro 
+URxvt.font:xft:Ubuntu Mono:size=14:style=Regular:antialias=true,xft:WenQuanYi Micro 
 Hei:size=16:style=Regular:antialias=true
-URxvt.boldfont:xft:Ubuntu Mono:size=12:style=bold:antialias=true,xft:WenQuanYi Micro 
+URxvt.boldfont:xft:Ubuntu Mono:size=14:style=bold:antialias=true,xft:WenQuanYi Micro 
 Hei:size=16:style=Bold:antialias=tr

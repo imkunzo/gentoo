@@ -1,4 +1,4 @@
-#
+# gentoo defaults
 net-misc/iputils -caps -filecaps
 # arc-theme
 >=x11-themes/arc-theme-20160605 gtk2
@@ -11,7 +11,7 @@ x11-terms/rxvt-unicode 256-color unicode3 mousewheel
 # shadowsocks-libev
 >=net-proxy/shadowsocks-libev-2.5.0-r1 openssl
 # emacs
-app-editors/emacs gif imagemagick libxml2 png tiff xpm
+app-editors/emacs -gtk -gtk3 Xaw3d athena gif gsettings imagemagick libxml2 png tiff xpm
 # layman
 app-portage/layman cvs git subversion
 # subversion
@@ -23,11 +23,22 @@ media-sound/alsa-utils ncurses
 >=dev-qt/qtsql-5.6.1 sqlite
 >=dev-libs/libpcre-8.38-r1 pcre16
 # cups
-=net-print/cups-filters-1.5.0 foomatic
+>=app-text/poppler-0.45.0 utils
+>=net-print/cups-filters-1.11.4 foomatic
 # virtualbox
 =app-emulation/virtualbox-5.1.6 qt5 sdk
 >=media-libs/libsdl-1.2.15-r9 video
-# dpkg
-=app-arch/dpkg-1.17.26 bzip2
 # feh
 media-gfx/feh exif
+# git
+dev-vcs/git -gtk curl highlight
+# vlc
+>=x11-libs/libva-1.6.2 drm
+>=sys-libs/zlib-1.2.8-r1 minizip
+>=media-video/ffmpeg-2.8.6 aac mp3 vorbis x264 x265 xvid
+>=media-video/vlc-2.2.4 avcodec avformat dts ffmpeg flac fontconfig gcrypt gnutls matroska mp3 mpeg ogg qt5 rtsp skins swscale upnp vorbis x264 x265 xv
+# wps office
+>=media-fonts/corefonts-1-r7 tahoma
+>=app-office/wps-office-10.1.0.5672_alpha21 corefonts sharedfonts
+# i3wm
+>=x11-wm/i3-4.12 pango

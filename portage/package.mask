@@ -1,3 +1,4 @@
+# gentoo defaults
 <sys-devel/libtool-2.4.3-r2
 <sys-apps/openrc-0.13.0
 <sys-process/procps-3.3.9-r2
@@ -8,7 +9,14 @@
 <app-i18n/opencc-1.0.4
 # virtualbox
 <app-emulation/virtualbox-5.1.6
+<app-emulation/virtualbox-additions-5.1.6
 # xmind
 <app-misc/xmind-3.6.1-r1
 # intellij idea
 <dev-util/idea-ultimate-2016.1.2.145.972.3
+# lightdm
+<x11-misc/lightdm-1.19.4
+# cups-filter
+<net-print/cups-filters-1.11.4
+# i3wm
+<x11-wm/i3-4.12
