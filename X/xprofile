@@ -2,9 +2,6 @@
 
 eval "$(dbus-launch --sh-syntax --exit-with-session)"
 
-# PATH
-export PATH="$HOME/bin:$PATH"
-
 # fcitx
 export XMODIFIERS="@im=fcitx"
 export XIM=fcitx

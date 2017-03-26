@@ -1,44 +1,27 @@
-# gentoo defaults
-net-misc/iputils -caps -filecaps
-# arc-theme
->=x11-themes/arc-theme-20160605 gtk2
-# rxvt-unicode
-x11-terms/rxvt-unicode 256-color unicode3 mousewheel
+# Xorg
+app-text/asciidoc python_single_target_python2_7
+>=media-libs/mesa-13.0.5 egl
+# nvidia
+x11-drivers/nvidia-drivers driver kms tools uvm
 # google chrome
 >=app-text/xmlto-0.0.26-r1 text
->=app-text/poppler-0.45.0 lcms cxx
->=www-client/google-chrome-53.0.2785.116 plugins
-# shadowsocks-libev
->=net-proxy/shadowsocks-libev-2.5.0-r1 openssl
-# emacs
-app-editors/emacs -gtk -gtk3 Xaw3d athena gif gsettings imagemagick libxml2 png tiff xpm
-# layman
-app-portage/layman cvs git subversion
-# subversion
->=dev-vcs/subversion-1.8.16 http
-# alsa-utils enable alsamixer
-media-sound/alsa-utils ncurses
-# dropbox
->=dev-qt/qtcore-5.6.1 icu
->=dev-qt/qtsql-5.6.1 sqlite
->=dev-libs/libpcre-8.38-r1 pcre16
-# cups
->=app-text/poppler-0.45.0 utils
->=net-print/cups-filters-1.11.4 foomatic
-# virtualbox
-=app-emulation/virtualbox-5.1.6 qt5 sdk
->=media-libs/libsdl-1.2.15-r9 video
-# feh
-media-gfx/feh exif
+>=app-text/poppler-0.45.0 lcms utils cxx
+www-client/google-chrome plugins
+# vim
+app-editors/vim lua perl racket ruby tcl
+>=dev-lang/lua-5.1.5-r4 deprecated
 # git
-dev-vcs/git -gtk curl highlight
-# vlc
->=x11-libs/libva-1.6.2 drm
->=sys-libs/zlib-1.2.8-r1 minizip
->=media-video/ffmpeg-2.8.6 aac mp3 vorbis x264 x265 xvid
->=media-video/vlc-2.2.4 avcodec avformat dts ffmpeg flac fontconfig gcrypt gnutls matroska mp3 mpeg ogg qt5 rtsp skins swscale upnp vorbis x264 x265 xv
-# wps office
->=media-fonts/corefonts-1-r7 tahoma
->=app-office/wps-office-10.1.0.5672_alpha21 corefonts sharedfonts
-# i3wm
->=x11-wm/i3-4.12 pango
+dev-vcs/git curl
+# fcitx rime
+>=app-arch/libarchive-3.2.2-r1 bzip2
+app-i18n/fcitx autostart gtk2 lua opencc pango qt4
+app-i18n/fcitx-configtool -gtk
+# adobe flash
+www-plugins/adobe-flash ppapi nsplugin
+# firefox
+>=media-libs/libpng-1.6.27 apng
+>=dev-lang/python-2.7.12:2.7 ncurses sqlite
+>=x11-base/xorg-server-1.19.2 xvfb
+www-client/firefox gmp-autoupdate nsplugin pgo rust startup-notification
+# layman
+app-portage/layman git
