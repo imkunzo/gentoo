@@ -1,6 +1,23 @@
 #!/bin/bash
 
+function smart_monitor() {
+    local xrandr=$(find /usr/bin/ -name xrandr)
+    
+    if [[ -n $xrandr ]];then
+        local vga=$($xrandr --listmonitors | grep "VGA" | awk '{print $NF}')
+        local lvds=$($xrandr --listmonitors | grep "LVDS" | awk '{print $NF}')
+        local lid_status=$(cat /proc/acpi/button/lid/LID/state | awk '{print $NF}')
+
+        if [[ -n $vga && $lid_status = "closed" ]];then
+            $xrandr --output $vga --auto --output $lvds --off
+        fi
+    fi
+}
+
 eval "$(dbus-launch --sh-syntax --exit-with-session)"
+
+# PATH
+export PATH="$HOME/bin:$PATH"
 
 # fcitx
 export XMODIFIERS="@im=fcitx"
@@ -8,4 +25,11 @@ export XIM=fcitx
 export XIM_PROGRAM=fcitx
 export QT_IM_MODULE=fcitx
 export GTK_IM_MODULE=fcitx
+
+### autostart
+# function
+smart_monitor
+# program
 fcitx
+$HOME/bin/touchpad-toggle.sh
+aria2c -D
