@@ -1,0 +1,34 @@
+/* 全局字体设置 */
+* {
+    font-family:'WenQuanYi Micro Hei' !important;
+    font-size: 14px !important;
+}
+
+/*定义列表行上下边距*/
+#threadTree treechildren::-moz-tree-row {
+    margin-top: 1px !important;
+    margin-bottom: 1px !important;
+}
+
+/*邮件标题列表文字(选中状态)*/
+#threadTree treechildren::-moz-tree-cell-text(selected) {
+    color: #000000 !important;
+}
+
+/*邮件标题列表背景(选中状态)*/
+#threadTree treechildren::-moz-tree-row(selected) {
+    /* background-color: #E3E3E3 !important; */
+    /*为选中行增加一个上浮凸显效果*/
+    margin-bottom: 0px !important;
+    margin-top: 1px !important;
+    *
+}
+
+/*修改文件夹边栏的字体大小*/
+#folderTree > treechildren,
+#abResultsTree > treechildren,
+#dirTree > treechildren,
+#accounttree > treechildren {
+    -moz-appearance: none !important;
+    font-size: 14px !important;
+}

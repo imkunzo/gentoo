@@ -16,8 +16,12 @@ function smart_monitor() {
 
 eval "$(dbus-launch --sh-syntax --exit-with-session)"
 
+# Java
+export JAVA_HOME=$HOME/opt/jdk1.8.0_121
+export CLASSPATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
 # PATH
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$JAVA_HOME/bin:$PATH"
 
 # fcitx
 export XMODIFIERS="@im=fcitx"

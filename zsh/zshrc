@@ -31,7 +31,11 @@ bindkey -e
 export JAVA_HOME=$HOME/opt/jdk1.8.0_121
 export CLASSPATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
+# Python virtualenv with virtualenvwrapper
+export WORKON_HOME=$HOME/opt/python-venv
+source /usr/bin/virtualenvwrapper.sh
+
 # Path
-export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$HOME/bin:$JAVA_HOME/bin:$HOME/.cargo/bin:$PATH
 
 # End of lines added by compinstall

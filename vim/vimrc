@@ -1,0 +1,139 @@
+" Get the defaults that most users want.
+source $VIMRUNTIME/defaults.vim
+
+function! OSX()
+    return has('macunix')
+endfunction
+function! LINUX()
+    return has('unix') && !has('macunix') && !has('win32unix')
+endfunction
+function! WINDOWS()
+    return  (has('win16') || has('win32') || has('win64'))
+endfunction
+
+if WINDOWS()
+    " set msys and mingw
+    let msys_dir = 'D:\opt\msys2\usr\bin'
+    let mingw64_dir = 'D:\opt\msys2\mingw64\bin'
+
+    if isdirectory(msys_dir)
+        let $PATH .= ';' . msys_dir
+    endif
+
+    if isdirectory(mingw64_dir)
+        let $PATH .= ';' . mingw64_dir
+    endif
+elseif LINUX()
+    let cargo_dir = '~/.cargo/bin'
+
+    if isdirectory(cargo_dir)
+        let $PATH .= ':' . cargo_dir
+    endif
+endif
+
+"设置文件的代码形式 utf8
+set encoding=utf-8
+set termencoding=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf-8,chinese,cp936,gb2312
+
+" 基本设置
+set nocompatible
+set nu
+set rnu
+set colorcolumn=80
+set ruler
+set cursorline
+filetype off
+
+" 插件管理
+call plug#begin('~/.vim/vimfiles/plugin')
+" Themes
+Plug 'tomasr/molokai'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'bling/vim-airline'
+Plug 'terryma/vim-multiple-cursors'
+" IDE
+Plug 'scrooloose/nerdtree'
+Plug 'valloric/youcompleteme',{'do': 'git submodule update --init --recursive'}
+Plug 'majutsushi/tagbar'
+Plug 'scrooloose/syntastic'
+" snippets
+Plug 'honza/vim-snippets'
+" clojure
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fireplace'
+" rust
+Plug 'rust-lang/rust.vim'
+Plug 'timonv/vim-cargo'
+Plug 'racer-rust/vim-racer'
+Plug 'ubnt-intrepid/rustup.vim'
+call plug#end()
+
+" 显示设置
+syntax enable
+colorscheme molokai
+let g:rehash256 = 1
+set guifont=Monaco:h10   
+set guioptions-=T
+set nobackup
+set noundofile
+set tabstop=4
+set expandtab
+
+"""" NERDTree
+" autocmd vimenter * NERDTree
+let NERDTreeChDirMode=2                                         " 设置当前目录为nerdtree的起始目录
+let NERDChristmasTree=1                                         " 使得窗口有更好看的效果
+let NERDTreeMouseMode=1                                         " 双击鼠标左键打开文件
+let NERDTreeWinSize=25                                          " 设置窗口宽度为25
+let NERDTreeQuitOnOpen=1                                        " 打开一个文件时nerdtree分栏自动关闭
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" YouCompleteMe
+if WINDOWS()
+	let g:ycm_server_python_interpreter = "d:/opt/Python/Python36/python.exe"
+elseif LINUX()
+    let g:ycm_server_python_interpreter = "/usr/bin/python3.6"
+endif
+" 不显示开启vim时检查ycm_extra_conf文件的信息  
+let g:ycm_confirm_extra_conf=0
+" 开启基于tag的补全，可以在这之后添加需要的标签路径  
+let g:ycm_collect_identifiers_from_tags_files=1
+"注释和字符串中的文字也会被收入补全
+let g:ycm_collect_identifiers_from_comments_and_strings = 0
+" 输入第2个字符开始补全
+let g:ycm_min_num_of_chars_for_completion=2
+" 禁止缓存匹配项,每次都重新生成匹配项
+let g:ycm_cache_omnifunc=0
+" 开启语义补全
+let g:ycm_seed_identifiers_with_syntax=1    
+"在注释输入中也能补全
+let g:ycm_complete_in_comments = 1
+"在字符串输入中也能补全
+let g:ycm_complete_in_strings = 1
+" 设置在下面几种格式的文件上屏蔽ycm
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar' : 1,
+      \ 'nerdtree' : 1,
+      \}
+
+" rust IDE
+set hidden
+if WINDOWS()
+	let g:racer_cmd = "d:/opt/Rust/cargo/bin/racer.exe"
+	let $RUST_SRC_PATH="d:/opt/Rust/rustup/toolchains/stable-x86_64-pc-windows-gnu/lib/rustlib/src/rust/src"
+elseif LINUX()
+    let g:racer_cmd = "~/.cargo/bin/racer"
+    let $RUST_SRC_PATH="~/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
+endif
+let g:racer_experimental_completer = 1
+let g:rustfmt_autosave = 1

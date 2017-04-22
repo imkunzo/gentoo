@@ -38,8 +38,8 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
-bindsym $mod+s exec rofi -show run 
-bindsym $mod+d exec rofi -show window
+bindsym $mod+d exec rofi -show run 
+bindsym $mod+Shift+d exec rofi -show window
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -79,8 +79,8 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+Shift+s layout stacking
-bindsym $mod+Shift+w layout tabbed
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -97,12 +97,12 @@ bindsym $mod+a focus parent
 
 # ASSIGN WORKSPACE VARIABLES
 set $WS1 "1: Web"
-set $WS2 "2: Media"
+set $WS2 "2: IDE"
 set $WS3 "3: Terminal"
 set $WS4 "4: Mail"
-set $WS5 "5: Tools"
-set $WS6 "6: Mindmap"
-set $WS7 "7: IDE"
+set $WS5 "5: Documents"
+set $WS6 "6: Tools"
+set $WS7 "7: Media"
 set $WS8 "8: SNS"
 set $WS9 "9: VM"
 
@@ -135,8 +135,8 @@ assign [class="^Firefox$"]                      $WS1
 assign [class="^google-chrome$"]                $WS1
 assign [class="^Google-chrome$"]                $WS1
 assign [class="^Chromium-browser-chromium$"]    $WS1
-assign [class="^vlc$"]                          $WS2
-assign [class="^Uget-gtk$"]                     $WS2
+assign [class="^Emacs$"]                        $WS2
+assign [class="^jetbrains-idea$"]               $WS2
 assign [class="^URxvt$"]                        $WS3
 assign [class="^xterm$"]                        $WS3
 assign [class="^XTerm$"]                        $WS3
@@ -147,7 +147,7 @@ assign [class="^Wps$"]                          $WS5
 assign [class="^Wpp$"]                          $WS5
 assign [class="^Et$"]                           $WS5
 assign [class="^XMind$"]                        $WS6
-assign [class="^jetbrains-idea$"]               $WS7
+assign [class="^vlc$"]                          $WS7
 assign [class="^electronic-wechat$"]            $WS8
 assign [class="^VirtualBox$"]                   $WS9
 assign [class="^spicec$"]                       $WS9
@@ -215,3 +215,5 @@ bar {
 
 # Startup
 exec --no-startup-id feh --bg-scale ~/Themes/Backgrounds/view_01.jpg
+
+exec xterm -e tmux
