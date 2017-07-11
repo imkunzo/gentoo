@@ -4,10 +4,6 @@
 =app-i18n/librime-1.2.9 ~amd64
 # systemd
 =sys-apps/systemd-232 ~amd64
-# firefox-bin
-=www-client/firefox-bin-52.0.1 ~amd64
-# lightdm webkit greeter
-=x11-misc/lightdm-webkit-greeter-1.0 ~amd64
 # required by =www-client/chromium-58.0.3029.19 (argument)
 =www-client/chromium-58.0.3029.19 ~amd64
 # required by wps-office (argument)
@@ -16,5 +12,43 @@
 =app-misc/xmind-3.7.1 ~amd64
 # required by =net-misc/aria2-1.31.0 (argument)
 =net-misc/aria2-1.31.0 ~amd64
-# required by =www-client/uget-1.10.4 (argument)
-=www-client/uget-1.10.4 ~amd64
+# required by =dev-lang/python-3.6.1 (argument)
+=dev-lang/python-3.6.1 ~amd64
+# required by =www-client/firefox-bin-53.0 (argument)
+=www-client/firefox-bin-53.0 ~amd64
+# required by app-mobilephone/heimdall (argument)
+=app-mobilephone/heimdall-1.4.1 ~amd64
+# use Perl from ~arch
+dev-lang/perl
+perl-core/*
+virtual/perl-*
+# required by gentoo-perl-helpers (argument)
+=app-admin/gentoo-perl-helpers-0.2.1 ~amd64
+# required by =x11-misc/lightdm-gtk-greeter-2.0.2 (argument)
+=x11-misc/lightdm-gtk-greeter-2.0.2 ~amd64
+# required by =virtual/emacs-25 (argument)
+=virtual/emacs-25 ~amd64
+# required by =app-editors/emacs-25.2 (argument)
+=app-editors/emacs-25.2 ~amd64
+# required by =dev-lang/python-3.6.1-r1 (argument)
+=dev-lang/python-3.6.1-r1 ~amd64
+# required by app-laptop/tpacpi-bat-3.0-r1::gentoo
+# required by app-laptop/tpacpi-bat (argument)
+=sys-power/acpi_call-1.1.0-r1 ~amd64
+# required by app-laptop/tpacpi-bat (argument)
+=app-laptop/tpacpi-bat-3.0-r1 ~amd64
+# required by app-emulation/virtualbox-bin-5.1.22.115126::gentoo
+# required by =app-emulation/virtualbox-bin-5.1.22.115126 (argument)
+=app-emulation/virtualbox-modules-5.1.22 ~amd64
+# required by =app-emulation/virtualbox-bin-5.1.22.115126 (argument)
+=app-emulation/virtualbox-bin-5.1.22.115126 ~amd64
+# required by =sys-libs/glibc-2.24-r3 (argument)
+=sys-libs/glibc-2.24-r3 ~amd64
+# required by dev-python/m2crypto-0.24.0::gentoo
+# required by net-wireless/crda-3.18-r1::gentoo
+# required by net-wireless/wpa_supplicant-2.6-r1::gentoo
+# required by @selected
+# required by @world (argument)
+=dev-libs/openssl-1.0.2l ~amd64
+# required by =net-misc/dropbox-26.3.21 (argument)
+=net-misc/dropbox-26.3.21 ~amd64

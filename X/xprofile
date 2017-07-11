@@ -16,12 +16,8 @@ function smart_monitor() {
 
 eval "$(dbus-launch --sh-syntax --exit-with-session)"
 
-# Java
-export JAVA_HOME=$HOME/opt/jdk1.8.0_121
-export CLASSPATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-
-# PATH
-export PATH="$HOME/bin:$JAVA_HOME/bin:$PATH"
+# env export
+source $HOME/dotfiles/zsh/env_export
 
 # fcitx
 export XMODIFIERS="@im=fcitx"
@@ -34,6 +30,8 @@ export GTK_IM_MODULE=fcitx
 # function
 smart_monitor
 # program
+nm-applet &
 fcitx
 $HOME/bin/touchpad-toggle.sh
+dropbox
 aria2c -D
